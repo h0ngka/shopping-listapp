@@ -288,7 +288,7 @@
 
   addBtn.addEventListener("click", addItem);
   input.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") addItem();
+    if (e.key === "Enter" && !e.isComposing && e.keyCode !== 229) addItem();
   });
   clearDoneBtn.addEventListener("click", clearDone);
 
